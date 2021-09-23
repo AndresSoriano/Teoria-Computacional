@@ -33,15 +33,12 @@ public class Universo{
 		return r;
 	}
 
-  /*Proceso de creación de las familias desde 1 hasta el numero ingresado
-  *Proceso donde se crean los archivos en donde se guardaran los datos de las familia
-  */
 	public static void proceso (int valor){
 		int tam = 0, f = 0, m, uni = 0, h = 0;
 		ArrayList <String> alf = new ArrayList <String>();
 		ArrayList <String> aux = new ArrayList <String>();
 		String auxe;
-		for(uni = 0; uni <= valor ; uni++){
+		for(uni = 1; uni <= valor ; uni++){
 			tam = calTam (uni);
 			aux = creaArreglo (tam);
 			h = alf.size();
@@ -56,7 +53,6 @@ public class Universo{
 		System.out.print("\nTotal de elementos: " +f);
 	}
 
-  /*Creacion y escritura del archivo de salida*/
 	public static void creaArchivo (ArrayList AR, int tam, int valk){
 		File Archivo;
 		PrintWriter escribir;
@@ -82,7 +78,6 @@ public class Universo{
 		}
 	}
 
-  /*Tamaño de la familia con cierto numero de digitos*/
 	public static int calTam (int k){
 		int i, l = 2;
 		if(k > 0){
@@ -95,7 +90,6 @@ public class Universo{
 		return l;
 	}
 	
-  /*Creación de las familias de base binaria*/
 	public static ArrayList creaArreglo (int tam){
 		int j, g = 0, i, k, res = tam;
 		ArrayList <String> AR = new ArrayList<String>();
